@@ -1,0 +1,927 @@
+[2016-11-22 09:43:39] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'mysql'@'localhost' (using password: YES)' in C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:55
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(55): PDO->__construct('mysql:host=127....', 'mysql', 'mysql', Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(924): call_user_func(Object(Closure))
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Schema\MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#16 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\OpenServer\domains\copybook.ru\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-11-22 09:46:37] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'dushinov'' in C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:55
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(55): PDO->__construct('mysql:host=127....', 'mysql', 'mysql', Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFactory.php(61): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(924): call_user_func(Object(Closure))
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(792): Illuminate\Database\Connection->getPdo()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(677): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Connection.php(349): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Schema\MySqlBuilder.php(21): Illuminate\Database\Connection->select('select * from i...', Array)
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Migrations\DatabaseMigrationRepository.php(141): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(404): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(103): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\MigrateCommand.php(58): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#16 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\OpenServer\domains\copybook.ru\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 {main}  
+[2016-11-22 12:15:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '@', expecting ']'' in C:\OpenServer\domains\copybook.ru\app\Http\routes.php:18
+Stack trace:
+#0 {main}  
+[2016-11-22 12:45:55] local.ERROR: exception 'InvalidArgumentException' with message 'View [PostController] not found.' in C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:137
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('PostController', Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Factory.php(165): Illuminate\View\FileViewFinder->find('PostController')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(779): Illuminate\View\Factory->make('PostController', Array, Array)
+#3 C:\OpenServer\domains\copybook.ru\app\Http\routes.php(15): view('PostController')
+#4 [internal function]: App\Providers\RouteServiceProvider->{closure}()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Route.php(158): call_user_func_array(Object(Closure), Array)
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Route.php(137): Illuminate\Routing\Route->runCallable(Object(Illuminate\Http\Request))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(724): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#13 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#23 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#28 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#33 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#35 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#41 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#46 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#48 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#53 {main}  
+[2016-11-22 17:53:41] local.ERROR: exception 'ErrorException' with message 'call_user_func_array() expects parameter 1 to be a valid callback, class 'Illuminate\Database\MySqlConnection' does not have a method 'rav'' in C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php:317
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'call_user_func_...', 'C:\\OpenServer\\d...', 317, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\DatabaseManager.php(317): call_user_func_array(Array, Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(217): Illuminate\Database\DatabaseManager->__call('rav', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(217): Illuminate\Database\DatabaseManager->rav('CURRENT_TIMESTA...')
+#4 C:\OpenServer\domains\copybook.ru\database\seeds\DatabaseSeeder.php(30): Illuminate\Support\Facades\Facade::__callStatic('rav', Array)
+#5 C:\OpenServer\domains\copybook.ru\database\seeds\DatabaseSeeder.php(30): Illuminate\Support\Facades\DB::rav('CURRENT_TIMESTA...')
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(39): PostsSeeder->run()
+#7 C:\OpenServer\domains\copybook.ru\database\seeds\DatabaseSeeder.php(16): Illuminate\Database\Seeder->call('PostsSeeder')
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(63): DatabaseSeeder->run()
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(2314): Illuminate\Database\Console\Seeds\SeedCommand->Illuminate\Database\Console\Seeds\{closure}()
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php(64): Illuminate\Database\Eloquent\Model::unguarded(Object(Closure))
+#11 [internal function]: Illuminate\Database\Console\Seeds\SeedCommand->fire()
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#14 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Seeds\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\OpenServer\domains\copybook.ru\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\OpenServer\domains\copybook.ru\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main}  
+[2016-11-22 17:58:14] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Database\Query\Expression::delete()' in C:\OpenServer\domains\copybook.ru\database\seeds\DatabaseSeeder.php:30
+Stack trace:
+#0 {main}  
+[2016-11-22 18:21:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:29:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:14] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:31:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:32:51] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:37:38] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:37:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:38:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:12
+Stack trace:
+#0 {main}  
+[2016-11-22 18:39:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 18:39:30] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:41:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:60
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:60
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:15] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:42:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:03] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:59
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:43:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 18:44:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:56
+Stack trace:
+#0 {main}  
+[2016-11-22 19:34:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:74
+Stack trace:
+#0 {main}  
+[2016-11-22 19:34:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:74
+Stack trace:
+#0 {main}  
+[2016-11-22 19:34:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:74
+Stack trace:
+#0 {main}  
+[2016-11-22 19:36:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:58
+Stack trace:
+#0 {main}  
+[2016-11-22 19:36:14] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:58
+Stack trace:
+#0 {main}  
+[2016-11-22 19:40:43] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\OpenServer\domains\copybook.ru\storage\framework\views\c8649e5ca7bc2e146b06a600b2e36baa756cd6cb.php:11
+Stack trace:
+#0 {main}  
+[2016-11-22 21:09:14] local.ERROR: exception 'InvalidArgumentException' with message 'View [index] not found.' in C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:137
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('index', Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Factory.php(165): Illuminate\View\FileViewFinder->find('index')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(779): Illuminate\View\Factory->make('index', Array, Array)
+#3 C:\OpenServer\domains\copybook.ru\app\Http\routes.php(27): view('index')
+#4 [internal function]: App\Providers\RouteServiceProvider->{closure}()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Route.php(158): call_user_func_array(Object(Closure), Array)
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Route.php(137): Illuminate\Routing\Route->runCallable(Object(Illuminate\Http\Request))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(724): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#13 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#23 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#28 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#33 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#35 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#41 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#46 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#48 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#53 {main}  
+[2016-11-22 21:09:34] local.ERROR: exception 'ErrorException' with message 'Undefined variable: posts' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php(4): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 4, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#7 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#48 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: posts (View: C:\OpenServer\domains\copybook.ru\resources\views\index.blade.php)' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#6 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#14 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#24 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#47 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#53 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#54 {main}  
+[2016-11-22 21:10:04] local.ERROR: exception 'ErrorException' with message 'Undefined variable: posts' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php(4): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 4, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#7 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#48 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: posts (View: C:\OpenServer\domains\copybook.ru\resources\views\index.blade.php)' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#6 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#14 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#24 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#47 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#53 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#54 {main}  
+[2016-11-22 21:10:04] local.ERROR: exception 'ErrorException' with message 'Undefined variable: posts' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php(4): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 4, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#7 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#48 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: posts (View: C:\OpenServer\domains\copybook.ru\resources\views\index.blade.php)' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#6 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#14 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#24 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#47 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#53 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#54 {main}  
+[2016-11-22 21:10:04] local.ERROR: exception 'ErrorException' with message 'Undefined variable: posts' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php(4): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 4, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#7 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#48 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: posts (View: C:\OpenServer\domains\copybook.ru\resources\views\index.blade.php)' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#6 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#14 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#24 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#47 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#53 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#54 {main}  
+[2016-11-22 21:10:05] local.ERROR: exception 'ErrorException' with message 'Undefined variable: posts' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php(4): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\OpenServer\\d...', 4, Array)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(42): include('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#6 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#7 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#15 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#25 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#42 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#43 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#45 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#48 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#49 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#50 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#53 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#55 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: posts (View: C:\OpenServer\domains\copybook.ru\resources\views\index.blade.php)' in C:\OpenServer\domains\copybook.ru\storage\framework\views\ad80931c7095012bfb1b0b8642d3f13fb4591a22.php:4
+Stack trace:
+#0 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 0)
+#1 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\OpenServer\\d...', Array)
+#2 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(149): Illuminate\View\Engines\CompilerEngine->get('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(120): Illuminate\View\View->getContents()
+#4 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\View.php(85): Illuminate\View\View->renderContents()
+#5 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Http\Response.php(53): Illuminate\View\View->render()
+#6 C:\OpenServer\domains\copybook.ru\vendor\symfony\http-foundation\Response.php(201): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1085): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(725): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#14 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#24 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#26 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 [internal function]: Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 [internal function]: Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#38 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(726): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#39 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(699): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#40 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Router.php(675): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#41 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(246): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#42 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#43 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#44 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#46 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(136): call_user_func_array(Array, Array)
+#47 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#49 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#50 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#51 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#52 C:\OpenServer\domains\copybook.ru\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#53 C:\OpenServer\domains\copybook.ru\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#54 {main}  
